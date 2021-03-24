@@ -12,8 +12,8 @@ Following software should be installed in advance (Win/MacOS/Linux):
 Source files can be found [here](documentation/).
 
 Setup:
-- Set build mode in Texmaker: Options &rarr; Configure Texmaker &rarr; Quick Build &rarr; PdfLaTeX + **Bib(la)tex + PdfLaTeX (x2) + View Pdf**.
-- Open `main.tex` with Texmaker. Set this as master document: Options &rarr; **Define Current Document as 'Master Document'**.
+- Set build mode in Texmaker: "Options" &rarr; "Configure Texmaker" &rarr; "Quick Build" &rarr; "PdfLaTeX + **Bib(la)tex + PdfLaTeX (x2) + View Pdf**."
+- Open `main.tex` with Texmaker. Set this as master document: "Options" &rarr; "**Define Current Document as 'Master Document'**".
 - Open `*.tex` files under [content/](documentation/content/) with Texmaker to edit the content.
 
 Tips:
@@ -40,8 +40,8 @@ Tips:
 Source files can be found [here](presentation/).
 
 Setup:
-- Set build mode in Texmaker: Options &rarr; Configure Texmaker &rarr; Quick Build &rarr; PdfLaTeX + **Bib(la)tex + PdfLaTeX (x2) + View Pdf**.
-- Open [main.tex](documentation/main.tex). Set this as master document: Options &rarr; **Define Current Document as 'Master Document'**.
+- Set build mode in Texmaker: "Options" &rarr; "Configure Texmaker" &rarr; "Quick Build" &rarr; "PdfLaTeX + **Bib(la)tex + PdfLaTeX (x2) + View Pdf**."
+- Open [main.tex](presentation/main.tex). Set this as master document: "Options" &rarr; "**Define Current Document as 'Master Document'**".
 
 Tips:
 - Start with catchy intro to catch the attention of the audience (maybe short demonstration or audio/video about possible impact of positive outcome of the presenting subject).
