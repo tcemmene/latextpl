@@ -13,8 +13,8 @@ Source files can be found [here](documentation/).
 
 Setup:
 - Set build mode in Texmaker: Options &rarr; Configure Texmaker &rarr; Quick Build &rarr; PdfLaTeX + **Bib(la)tex + PdfLaTeX (x2) + View Pdf**.
-- Open `main.tex`. Set this as master document: Options &rarr; **Define Current Document as 'Master Document'**.
-- Open `*.tex` files under [content/](documentation/content/) to edit the content of documentation.
+- Open `main.tex` with Texmaker. Set this as master document: Options &rarr; **Define Current Document as 'Master Document'**.
+- Open `*.tex` files under [content/](documentation/content/) with Texmaker to edit the content.
 
 Tips:
 - Images should be pasted in [img/](documentation/img/) directory. They should be renamed with a prefix number `01_*` or `02_*` to match the nth-section in the content. This way, the images are ordered and can be identified more quickly.
