@@ -9,6 +9,7 @@ Following software should be installed in advance (Win/MacOS/Linux):
 ## Templates
 
 ### Documentation
+![documentation](img-doc.png)
 Source files can be found [here](documentation/).
 
 Setup:
@@ -38,6 +39,7 @@ Tips:
 - Attachment PDFs can be pasted in [attachments/](documentation/attachments/) and be included in appendix with `\includepdf{attachment.pdf}`, see [90_appendix.tex](documentation/content/90_appendix.tex#L69-L73).
 
 ### Presentation
+![presentation](img-pre.png)
 Source files can be found [here](presentation/).
 
 Setup:
