@@ -22,7 +22,12 @@ Tips:
 - Section headers should always be written in uppercase.
 - Main sections (`\section()`) should be started with a short overview text that describes the content of the upcoming section.
 - Confidential or public sections can be defined by:
-  ```\iflong{Confidential content}\else{Public content}\fi```
+  ```\iflong{
+	Confidential content
+  }
+  \else{
+	Public content
+  }\fi```
   To switch between the compiled versions, either `\longtrue` or `\longfalse` can be uncommented in [main.tex](content/main.tex) line 27ff.
 - Attachment PDFs can be pasted in `attachments/` and be included in appendix with `\includepdf{}`, see [90_appendix.tex](content/90_appendix.tex) line 69ff.
 
