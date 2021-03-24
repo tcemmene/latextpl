@@ -15,6 +15,7 @@ Setup:
 - Set build mode in Texmaker: "Options" &rarr; "Configure Texmaker" &rarr; "Quick Build" &rarr; "PdfLaTeX + **Bib(la)tex + PdfLaTeX (x2) + View Pdf**."
 - Open `main.tex` with Texmaker. Set this as master document: "Options" &rarr; "**Define Current Document as 'Master Document'**".
 - Open `*.tex` files under [content/](documentation/content/) with Texmaker to edit the content.
+- Hit `F1` to compile.
 
 Tips:
 - Images should be pasted in [img/](documentation/img/) directory. They should be renamed with a prefix number `01_*` or `02_*` to match the nth-section in the content. This way, the images are ordered and can be identified more quickly.
@@ -42,6 +43,7 @@ Source files can be found [here](presentation/).
 Setup:
 - Set build mode in Texmaker: "Options" &rarr; "Configure Texmaker" &rarr; "Quick Build" &rarr; "PdfLaTeX + **Bib(la)tex + PdfLaTeX (x2) + View Pdf**."
 - Open [main.tex](presentation/main.tex). Set this as master document: "Options" &rarr; "**Define Current Document as 'Master Document'**".
+- Hit `F1` to compile.
 
 Tips:
 - Start with catchy intro to catch the attention of the audience (maybe short demonstration or audio/video about possible impact of positive outcome of the presenting subject).
