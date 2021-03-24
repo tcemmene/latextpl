@@ -1,12 +1,19 @@
 # LaTeX Templates
 This repository contains templates to create technical documentations and presentations using LaTeX.
 
+- [LaTeX Templates](#latex-templates)
+  * [Requirements](#requirements)
+  * [Template Infos](#template-infos)
+    + [Documentation](#documentation)
+    + [Presentation](#presentation)
+  * [More Infos](#more-infos)
+
 ## Requirements 
 Following software should be installed in advance (Win/MacOS/Linux):
 - MiKTeX [download](https://miktex.org/download) (compiler)
 - Texmaker [download](https://www.xm1math.net/texmaker/download.html) (editor)
 
-## Templates
+## Template Infos
 
 ### Documentation
 ![documentation](img-doc.png)
@@ -54,7 +61,7 @@ Tips:
 - Maximum of 16-17 slides with main content for 20min presentation time. Do not undershoot 1min per slide.
 - Less is more.
 
-## More 
+## More Infos
 - Basics tutorial: [flutterbys](https://www.flutterbys.com.au/stats/tut/tut17.1.html)
 - Abbreviations: [illinois.edu](http://ctan.math.illinois.edu/macros/latex/contrib/acronym/acronym.pdf)
 - Special characters: [oeis](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
