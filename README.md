@@ -22,7 +22,7 @@ Tips:
 - Images should be pasted in [img/](documentation/img/) directory. They should be renamed with a prefix number `01_*` or `02_*` to match the nth-section in the content. This way, the images are ordered and can be identified more quickly.
 - Title page is editable in [doku-tpl.cls](documentation/doku-tpl.cls#L32-L91) and in [main.tex](documentation/main.tex#L218-L228).
 - Header/footer are editable in [main.tex](documentation/main.tex#L250-L256).
-- Abbreviations are editable in [80_abbreviations.tex](documentation/content/80_abbreviations.tex). They must be ordered manually in the end - excel can help. Additional information can be found [here](http://ctan.math.illinois.edu/macros/latex/contrib/acronym/acronym.pdf).
+- Abbreviations are editable in [80_abbreviations.tex](documentation/content/80_abbreviations.tex). They must be ordered manually in the end - excel can help.
 - Bibliography is editable in [main.bbl](documentation/main.bbl). Each entry needs a unique `label` which can be used as `\cite{label}` in the content to identify the resource.
 - Section headers should always be written in uppercase (example: "Initial Situation" instead of "Initial situation").
 - Main sections (`\section()`) should be started with a short overview text that describes the content of the upcoming section.
@@ -56,4 +56,5 @@ Tips:
 
 ## More 
 - Basics tutorial: [flutterbys](https://www.flutterbys.com.au/stats/tut/tut17.1.html)
+- Abbreviations: [illinois.edu](Additional information can be found [here](http://ctan.math.illinois.edu/macros/latex/contrib/acronym/acronym.pdf))
 - Special characters: [oeis](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
