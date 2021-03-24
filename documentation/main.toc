@@ -1,0 +1,48 @@
+\babel@toc {english}{}
+\contentsline {part}{I\hspace {1em}Introduction}{6}{part.1}%
+\vspace *{-0.95cm}\hrulefill \par 
+\vspace *{0.35cm}\hrulefill \par 
+\contentsline {section}{\numberline {1}Initial Situation}{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1}State of the Art}{6}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Our Approach}{6}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Project Scope}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Time Horizon}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Previous Work}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Documentation Structure}{7}{subsection.2.3}%
+\contentsline {part}{II\hspace {1em}Concept}{8}{part.2}%
+\vspace *{-0.95cm}\hrulefill \par 
+\vspace *{0.35cm}\hrulefill \par 
+\contentsline {section}{\numberline {3}Problem Identification}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Task Definition}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Real-Time Requirements}{8}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Existing Methods}{8}{section.4}%
+\contentsline {section}{\numberline {5}Chosen Approach}{8}{section.5}%
+\newpage 
+\contentsline {part}{III\hspace {1em}Realization}{9}{part.3}%
+\vspace *{-0.95cm}\hrulefill \par 
+\vspace *{0.35cm}\hrulefill \par 
+\contentsline {section}{\numberline {6}Implementation}{9}{section.6}%
+\contentsline {section}{\numberline {7}Evaluation}{9}{section.7}%
+\contentsline {section}{\numberline {8}Demonstrator}{9}{section.8}%
+\contentsline {part}{IV\hspace {1em}Results}{10}{part.4}%
+\vspace *{-0.95cm}\hrulefill \par 
+\vspace *{0.35cm}\hrulefill \par 
+\newpage 
+\contentsline {section}{\numberline {9}Results}{10}{section.9}%
+\contentsline {section}{\numberline {10}Conclusion}{10}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Outlook}{10}{subsection.10.1}%
+\contentsline {section}{List of abbreviations}{11}{subsection.10.1}%
+\vspace *{-2.5mm}
+\contentsline {section}{List of Figures}{12}{subsection.10.1}%
+\vspace *{-2.5mm}
+\contentsline {section}{List of Tables}{12}{subsection.10.1}%
+\vspace *{-2.5mm}
+\contentsline {section}{Bibliography}{13}{subsection.10.1}%
+\contentsline {part}{V\hspace {1em}Appendix}{14}{part.5}%
+\vspace *{-0.95cm}\hrulefill \par 
+\vspace *{0.35cm}\hrulefill \par 
+\contentsline {section}{\numberline {A}Attachments}{14}{appendix.A}%
+\contentsline {section}{\numberline {B}Code snippets}{15}{appendix.B}%
+\contentsline {subsubsection}{\numberline {B.0.1}Main script}{15}{subsubsection.B.0.1}%
+\contentsline {subsubsection}{\numberline {B.0.2}Configuration Generator}{16}{subsubsection.B.0.2}%
+\contentsfinish 

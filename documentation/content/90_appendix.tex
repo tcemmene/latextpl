@@ -1,0 +1,77 @@
+% !TEX encoding = UTF-8 Unicode
+%Encoding: UTF-8
+
+\appendix
+
+%Der komplette Anhang befindet sich auf der beigelegten CD.
+%\\
+
+% OVERVIEW ABOUT APPENDIX ON CD
+%\begin{multicols}{2}
+
+\section{Attachments}
+Following documents are attached at the end of this document:
+
+\begin{itemize}
+\setlength{\itemsep}{-2pt}
+\item{000: Task Formulation}
+\item{001: Research Plan}
+\item{002: Project Plan}
+\end{itemize}
+
+For employees of \ac{HSLU}, all source code and calculation documents are available inside a GitLab repository on the Enterprise Lab servers:
+
+\begin{itemize}
+\item User access by request: \href{mailto:silvio.emmenegger@hslu.ch}{silvio.emmenegger@hslu.ch}
+\item Current work: \href{https://gitlab.enterpriselab.ch/acoustics-ai/asrc-for-real-time-applications}{https://gitlab.enterpriselab.ch/acoustics-ai/asrc-for-real-time-applications}
+\item Related work: \href{https://gitlab.enterpriselab.ch/acoustics-ai}{https://gitlab.enterpriselab.ch/acoustics-ai} 
+\end{itemize}
+
+
+
+\newpage
+\section{Code snippets}
+
+\subsubsection{Main script}
+\label{sec:appdix_main_script}
+
+\iflong {
+\lstinputlisting[language=Python,
+	caption={Python script.}, 
+	captionpos=b, 
+	label={lst:main}]{content/listings/main.py}
+
+\newpage
+}
+\else
+	(source code is confidential, only available to authorized persons)
+\fi 
+
+\subsubsection{Configuration Generator}
+\label{sec:appdix_config_gen}
+\iflong {
+	
+	\lstinputlisting[language={[Visual]Basic},
+	caption={VBA script.}, 
+	captionpos=b, 
+	label={lst:config_gen}]{content/listings/main.vba}
+	
+}
+\else
+	(source code is confidential, only available to authorized persons)
+\fi 
+
+
+
+
+%% ###########################          ATTACHMENTS           ###########################
+
+\includepdf[page={1,2,3}]{attachments/Aufgabenstellung_Masterthesis_SilvioEmmenegger.pdf}
+
+\includepdf[page={1,2}]{attachments/Research_Plan_Silvio_Emmenegger.pdf}
+
+\begin{landscape}
+	\includepdf[page={1}, landscape=true]{attachments/ProjectPlan_Detailed.pdf}
+\end{landscape}
+
+

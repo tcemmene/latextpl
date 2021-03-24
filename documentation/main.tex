@@ -1,0 +1,405 @@
+% !TEX encoding = UTF-8 Unicode
+%Encoding: UTF-8
+\documentclass[toc=listofnumbered]{doku-tpl}
+
+\usepackage{layout}
+\usepackage{color}          			% Farben
+\usepackage{colortbl}       			% Tabellen einfärben
+\usepackage[utf8]{inputenc} 			% Encoding
+\usepackage[binary-units=true]{siunitx}	% Einheiten
+\usepackage{steinmetz}					% benötigt für Winkelzeichen \angle{}
+\usepackage{amsmath, amssymb}			% Math
+\usepackage{enumitem}
+\usepackage{pdflscape} %\usepackage{lscape}
+\usepackage{lmodern}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage{titletoc}
+\usepackage{pdflscape}
+\usepackage{siunitx}
+\usepackage[justification=centering]{caption}
+\usepackage{bookmark}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+
+% Long/Short Version of documentation
+\newif\iflong
+\longtrue  % Confidential
+\%longfalse  % Public
+%  usage:
+%  \iflong long version \else short version \fi 
+
+% Row/Colspan Table
+\usepackage{multirow,tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\renewcommand{\arraystretch}{2}
+
+% Table Justification
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Landscape
+\def\insertpage{\mbox{}\vfil\hfil\thepage}
+
+% Column sep in List of Abbreviations
+\setlength\columnsep{30pt} % This is the default columnsep for all pages
+
+% Big Frac
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+
+% Paragraph
+\usepackage{amsthm}% for \@addpunct
+\makeatletter
+\def\els@aparagraph[#1]#2{\elsparagraph[#1]{#2\@addpunct{.}}}
+\def\els@bparagraph#1{\elsparagraph*{#1\@addpunct{.}}}
+
+% Footnote Einstellungen
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+\makesavenoteenv{table}
+\usepackage[perpage, symbol, bottom]{footmisc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+% Repeat figure caption
+\usepackage{caption}
+\newcommand{\repeatcaption}[2]{%
+  \renewcommand{\thefigure}{\ref{#1}}%
+  \captionsetup{list=no}%
+  \caption{#2 (repeated from page \pageref{#1})}%
+}
+
+% "Evaluate at" math (vertical line) Example: |_{a}
+\usepackage{amsmath,mleftright}
+\usepackage{xparse}
+\NewDocumentCommand{\evalat}{sO{\big}mm}{%
+  \IfBooleanTF{#1}
+   {\mleft. #3 \mright|_{#4}}
+   {#3#2|_{#4}}%
+}
+
+% Math alphabet
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+% Listings
+\lstset{
+    numbers=left,
+    breaklines=true,
+    tabsize=2,
+    %basicstyle=\ttfamily,
+    basicstyle=\footnotesize\ttfamily,
+    literate={\ \ }{{\ }}1,
+}
+\lstloadlanguages{[Visual]Basic}
+
+% Yaml Listings
+\newcommand\YAMLcolonstyle{\color{red}\mdseries}
+\newcommand\YAMLkeystyle{\color{black}\bfseries}
+\newcommand\YAMLvaluestyle{\color{blue}\mdseries}
+\newcommand\language@yaml{yaml}
+\expandafter\expandafter\expandafter\lstdefinelanguage
+\expandafter{\language@yaml}
+{
+  keywords={true,false,null,y,n},
+  keywordstyle=\color{darkgray}\bfseries,
+  basicstyle=\YAMLkeystyle,                                 % assuming a key comes first
+  sensitive=false,
+  comment=[l]{\#},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\YAMLvaluestyle\ttfamily,
+  moredelim=[l][\color{orange}]{\&},
+  moredelim=[l][\color{magenta}]{*},
+  moredelim=**[il][\YAMLcolonstyle{:}\YAMLvaluestyle]{:},   % switch to value style at :
+  morestring=[b]',
+  morestring=[b]",
+  literate =    {---}{{\ProcessThreeDashes}}3
+                {>}{{\textcolor{red}\textgreater}}1     
+                {|}{{\textcolor{red}\textbar}}1 
+                {\ -\ }{{\mdseries\ -\ }}3,
+}
+\lst@AddToHook{EveryLine}{\ifx\lst@language\language@yaml\YAMLkeystyle\fi}
+\newcommand\ProcessThreeDashes{\llap{\color{cyan}\mdseries-{-}-}}
+
+% Capitalize TOC
+%\usepackage{tocbibind}
+%\let\oldaddcontentsline\addcontentsline
+%\newcommand{\ADDCONTENTSLINE}[3]{%
+%  \oldaddcontentsline{#1}{#2}{\MakeUppercase{#3}}%
+%}
+%\newcommand{\CAPinToC}{\let\addcontentsline\ADDCONTENTSLINE}
+%\newcommand{\noCAPinToC}{\let\addcontentsline\oldaddcontentsline}
+
+
+% Abbreviations with lowercase letters in text
+\usepackage{acronym}
+\usepackage{etoolbox}
+\makeatletter
+\newif\if@in@acrolist
+\AtBeginEnvironment{acronym}{\@in@acrolisttrue}
+\newrobustcmd{\LU}[2]{\if@in@acrolist#1\else#2\fi}
+\newcommand{\ACF}[1]{{\@in@acrolisttrue\acf{#1}}}
+\makeatother
+
+% Json Listing
+\usepackage{xcolor}
+\definecolor{eclipseStrings}{RGB}{42,0.0,255}
+\definecolor{eclipseKeywords}{RGB}{127,0,85}
+\colorlet{numb}{magenta!60!black}
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    commentstyle=\color{eclipseStrings}, % style of comment
+    stringstyle=\color{eclipseKeywords}, % style of strings
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{gray}, %only if you like
+    string=[s]{"}{"},
+    comment=[l]{:\ "},
+    morecomment=[l]{:"},
+    literate=
+        *{0}{{{\color{numb}0}}}{1}
+         {1}{{{\color{numb}1}}}{1}
+         {2}{{{\color{numb}2}}}{1}
+         {3}{{{\color{numb}3}}}{1}
+         {4}{{{\color{numb}4}}}{1}
+         {5}{{{\color{numb}5}}}{1}
+         {6}{{{\color{numb}6}}}{1}
+         {7}{{{\color{numb}7}}}{1}
+         {8}{{{\color{numb}8}}}{1}
+         {9}{{{\color{numb}9}}}{1}
+}
+
+% Listen-Item-Abstände global festlegen
+\usepackage{enumitem}
+\setlist[1]{itemsep=-4pt}
+
+    % Eigene Tabellen
+    % Hellgrau und weiss abwechselnd
+\newenvironment{zebratabular}{\rule{0pt}{11pt}\rowcolors{2}{lgray}{white}\tabular}{\endtabular}
+\newenvironment{zebralongtable}{\rule{0pt}{11pt}\rowcolors{2}{lgray}{white}\longtable}{\endlongtable}
+\renewcommand{\arraystretch}{1.2}
+\usepackage[babel,german=quotes]{csquotes}  % Deutsche Gänsefüsschen
+\usepackage{acronym} 					% Abkürzungsverzeichnis
+\usepackage{array,multirow,graphicx}		% Tabelle Multirow
+%\usepackage[square, numbers]{natbib}
+%\usepackage{makeidx}
+%\bibliographystyle{abbrvnat}
+
+\bibliographystyle{unsrtnat} 
+\usepackage[sort&compress,numbers]{natbib}
+
+\makeatletter
+
+% Use stars in minipage footnotes
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+
+\newcommand\cntr{\centering\arraybackslash}
+\renewcommand\STtextcell{@}
+        
+% no indent on newline
+\setlength{\parindent}{0pt}
+        
+% display paragraph more like section
+%\renewcommand\paragraph{%
+% \@startsection{paragraph}{4}{0mm}%
+%	{-\baselineskip}%
+%	{.5\baselineskip}%
+%	{\normalfont\normalsize\bfseries}}
+%\makeatother
+ 
+\subject{Master Thesis, FS20}
+\title{Acoustic Scene and Room Classification for Real-Time Applications}
+\subtitle{{\normalsize{Creation of Binaural Multi-Label Audio Dataset including Scenes and Soundscapes\\ \vspace{0.1cm} 
+Training of Multi-Output Deep CNN in Python/Tensorflow with Keras\\ \vspace{0.1cm} 
+Implementation Concept of Optimized CNN on Dedicated Hardware}}}
+        \author{Silvio Emmenegger}
+        \adviser{Prof. Dr. Jürgen Wassner}
+        \data{Document classification: 
+			\iflong Confidential \else Public \fi         
+        \\ 
+        \vspace{0.2cm} Horw, July 10, 2020}
+        \frontpage{}
+        
+        \setcounter{page}{1}
+        \pagenumbering{Roman}
+ 		\pagestyle{fancy}
+ 	 	
+		\graphicspath{{img/}, {img/export/}} 
+ 		
+ 		% force fancyhdr on toc
+ 		\let\LaTeXStandardTOC\tableofcontents%
+		\renewcommand{\tableofcontents}{%
+		\begingroup
+		\renewcommand{\thispagestyle}[1]{%
+		\relax% Do nothing at all
+		}%
+		\LaTeXStandardTOC%
+		\endgroup
+		}%
+
+        \renewcommand{\footrulewidth}{0.4pt}
+        \pagebreak
+		\fancyhead{}
+	   	\fancyfoot{}	 
+	 	\fancyhead[R]{Master Thesis, FS20}
+	        
+		\fancyfoot[L]{Silvio Emmenegger}
+	  	\fancyfoot[C]{\thepage}
+		\fancyfoot[R]{Hochschule Luzern T\&A}
+    
+        \fancyfoot[C]{Page \thepage \ of \pageref{LastPage}}
+        
+        \setlength{\headheight}{15pt}
+        \setlength{\headsep}{0.2in}
+         
+        \setcounter{page}{1}
+        \pagenumbering{arabic}
+        
+		\include{content/00_probity_statement}	
+		\clearpage
+		\include{content/01_abstract_en}
+		%    \include{content/abstract_de}
+
+    	\clearpage
+    	\vspace*{-10mm}
+    	\tableofcontents
+    	
+%			  	
+        \clearpage
+        \fancyhead[L]{\partname \ \thepart \ - \parttitle}	  
+        
+        
+%-----------------------------------------------------------------        
+  		% Include Files
+%-----------------------------------------------------------------        
+  				
+        \part{Introduction}
+        \input{content/10_introduction}
+        \clearpage
+        
+        \part{Concept}
+        \input{content/20_concept}
+        \clearpage
+        
+		\addtocontents{toc}{\protect\newpage}	% force newpage in toc
+        \addtocontents{toc}{\protect\vspace*{2.5mm}}     % add vspace in toc
+                
+        \part{Realization}
+        \input{content/30_realization}
+        \clearpage
+        
+        \part{Results}
+        \input{content/40_results}
+        \clearpage
+  
+       
+%-----------------------------------------------------------------        
+  		% Verzeichnisse
+%-----------------------------------------------------------------        
+		
+        \clearpage
+		\fancyhead{}
+	 	\fancyhead[R]{VM2, HS19}
+	 	
+	 	
+		\bookmarksetup{startatroot} % next content out of last part in bookmarks
+		
+    	\clearpage
+		\addcontentsline{toc}{section}{List of abbreviations}
+    	\include{content/80_abbreviations}	 	
+    	
+	 
+        \addtocontents{toc}{\protect\vspace*{-2.5mm}}     % add vspace in toc
+        
+        
+		%\section{Verzeichnisse}
+		
+		% Abbildungsverzeichnis
+		
+		%\addtocounter{subsection}{1}	
+		%\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}Abbildungsverzeichnis}
+		\addcontentsline{toc}{section}{List of Figures}
+		%\subsection{Abbildungsverzeichnis}
+		
+		\clearpage
+%		\vspace*{-13mm}
+		\vspace*{-21mm}
+		\listoffigures
+		
+        \addtocontents{toc}{\protect\vspace*{-2.5mm}}     % add vspace in toc
+        
+        
+		%\newpage
+		
+		% Tabellenverzeichnis    
+		
+		%\addtocounter{subsection}{1}	
+		%\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}Tabellenverzeichnis}
+		\addcontentsline{toc}{section}{List of Tables}
+		%\subsection{Tabellenverzeichnis}
+		\listoftables
+				
+		
+        \addtocontents{toc}{\protect\vspace*{-2.5mm}}     % add vspace in toc
+        		
+        
+  		% Bibliografie
+		\clearpage
+		%\addtocounter{subsection}{1}	
+		%\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}Literaturverzeichnis}
+ 		%\addcontentsline{toc}{section}{\protect\numberline{Literaturverzeichnis}}
+	   	\addcontentsline{toc}{section}{Bibliography}
+	    %\lstlistoflistings
+	    %\subsection{Literaturverzeichnis}
+	    \renewcommand\refname{Bibliography}
+	    \begin{flushleft}
+	    	\bibliography{references}
+	        \clearpage
+	    \end{flushleft}
+        \nocite{*} % alle quellen ausgeben
+
+
+%-----------------------------------------------------------------        
+  		% Appendix
+%----------------------------------------------------------------- 
+        
+%	  	\fancyhead[L]{\partname \ \thepart \ - \parttitle}
+	  	
+	  	%\setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
+	  	
+%        \addtocontents{toc}{\protect\newpage}	% force newpage in toc
+        \clearpage
+%        \addtocontents{toc}{\protect\vspace*{-9mm}}     % add vspace in toc
+        \part{Appendix}
+		\input{content/90_appendix}
+		
+%		\addcontentsline{toc}{section}{List of listings}
+
+%		\lstlistoflistings
+        
+       	% \pagenumbering{gobble}
+        \fancyhead[L]{\nouppercase\rightmark}
+        	\fancyfoot[C]{}
+        	\fancyfoot[L]{Silvio Emmenegger}
+        \fancyfoot[C]{Seite \thepage \ von \pageref{LastPage}}
+        	\fancyfoot[R]{Hochschule Luzern T\&A}
+        
+        \titleformat{\section}
+        [display]
+        {\normalfont\Huge\bfseries\centering\vspace*{7cm}}
+        {\titlerule[2px] \vspace{20px}\appendixname \ \thesection}
+        {0pt}
+        {\huge}[\rule{\textwidth}{2px}]
+	
+        
+        \include{content/appendix}  
+    
+\end{document}

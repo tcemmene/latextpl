@@ -1,0 +1,127 @@
+\usepackage[utf8]{inputenc}
+\usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage[titletoc, title, header]{appendix} 
+\usepackage{float}
+\usepackage{tocloft}
+\usepackage[hidelinks]{hyperref}
+\usepackage{pdfpages}
+\usepackage{amsfonts}					% Mathe
+\usepackage{amsmath}					% "
+\usepackage{amssymb}					% "
+\usepackage{mathcomp}					% "
+\usepackage{mathabx}                    % "
+\usepackage{relsize}
+\usepackage{spreadtab}
+\usepackage{multicol}
+\usepackage{array}
+%\usepackage{natbib}
+\usepackage{multicol}               %Aufzählung in Spalten
+\usepackage{wrapfig}
+\usepackage[]{caption}
+
+\usepackage{makeidx}        % Index
+\usepackage{hyperref}       % Verlinkte interne und externe Verweise
+\usepackage{cite}           % Zitieren
+%\usepackage{apacite}        % APA Stil
+%\usepackage[square, comma, numbers, sort&compress]{natbib}
+%\bibliographystyle{abbrv}
+
+% Source-Code Paket
+\usepackage{color}
+\usepackage{colortbl}
+\definecolor{gray}{gray}{0.749}
+\definecolor{lgray}{gray}{0.85}
+\definecolor{comment}{rgb}{0.6,0.6,0.54}
+\definecolor{dgreen}{rgb}{0.2,0.8,0}
+\usepackage{listings}
+\lstset{language=[LaTeX]TeX}
+\lstloadlanguages{TeX}
+\lstset{basicstyle=\ttfamily,
+        numbers=left,
+        numberstyle=\tiny,
+        numbersep=5pt,
+        texcsstyle=\color{black},
+        backgroundcolor=\color{gray!10},
+        commentstyle=\color{comment},
+        keywordstyle=\bfseries,
+        frame=single,
+        tabsize=2,
+        rulecolor=\color{black!30},
+        title=\lstname,
+        escapeinside={\%*}{*)},
+        breaklines=true,
+        breakatwhitespace=true,
+        basicstyle=\footnotesize,
+        showstringspaces=false
+        framextopmargin=2pt,
+        framexbottommargin=2pt,
+        inputencoding=utf8,
+        extendedchars=true,
+        literate={Ö}{{\"O}}1
+                 {Ä}{{\"A}}1
+                 {Ü}{{\"U}}1
+                 {ü}{{\"u}}1
+                 {ä}{{\"a}}1
+                 {ö}{{\"o}}1 }
+                 
+%\usepackage{cite}
+\usepackage{tikz}
+    \usetikzlibrary{decorations.pathreplacing}
+    
+\newcommand\savepos[1]{\tikz[remember picture]{\node(#1){};}}
+
+\newcommand\aref[1]{\textit{Abschnitt \ref{#1}}}
+\newcommand\fref[1]{\textit{Abb. \ref{#1}}}
+\newcommand\appref[1]{\textit{Anhang \ref{#1}}}
+\newcommand\lstref[1]{\textit{Listing \ref{#1}}}
+\newcommand\tref[1]{\textit{Tabelle. \ref{#1}}}
+\newcommand\uuline[1]{\underline{\underline{#1}}}
+
+%Mathcommands
+\newcommand{\im}{\ensuremath{\mathrm{j}}}
+\newcommand{\e}{\ensuremath{\mathrm{e\;\!}}}
+\newcommand{\di}{\ensuremath{\mathrm{d}}}
+\newcommand{\pdi}{\ensuremath{\partial}}
+\newcommand{\cis}{\ensuremath{\mathrm{cis}}}
+\newcommand{\bs}{\ensuremath{\backslash}}
+\newcommand{\difrac}[2]{\ensuremath{\frac{\di #1}{\di #2}}}
+\newcommand{\pdifrac}[2]{\ensuremath{\frac{\pdi #1}{\pdi #2}}}
+
+\renewcommand*{\appendixpagename}{\vspace*{7cm}\rule{\textwidth}{2px}\\
+	\vspace*{0.5cm}
+	\centering\Huge Appendices\\
+	\rule{\textwidth}{2px}}
+	
+
+\titleformat{\part}
+[display]
+{\normalfont\Huge\bfseries}
+{\titlerule[2px] \vspace{20px}\MakeUppercase{\partname} \thepart}
+{0pt}
+{\huge}[\rule{\textwidth}{2px}]
+
+\titlespacing*{\part}{0pt}{0pt}{20pt}
+
+\let\Oldpart\part
+\newcommand{\parttitle}{}
+\renewcommand{\part}[1]{\Oldpart{#1}\renewcommand{\parttitle}{#1}\addtocontents{toc}{\protect\vspace*{-0.95cm}\hrulefill\par}\addtocontents{toc}{\protect\vspace*{0.35cm}\hrulefill\par}}
+
+% Listing Style
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\lstset{language=Matlab,
+    breaklines=true,
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle={\tiny \color{black}},
+    numbersep=9pt,
+    %emph=[1]{for,end,break},emphstyle=[1]\color{red},
+}
