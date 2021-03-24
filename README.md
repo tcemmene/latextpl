@@ -14,7 +14,7 @@ Source files can be found [here](documentation/).
 
 Setup:
 - Set build mode in Texmaker: "Options" &rarr; "Configure Texmaker" &rarr; "Quick Build" &rarr; "PdfLaTeX + **Bib(la)tex + PdfLaTeX (x2) + View Pdf**."
-- Open `main.tex` with Texmaker. Set this as master document: "Options" &rarr; "**Define Current Document as 'Master Document'**".
+- Open [main.tex](documentation/main.tex) with Texmaker. Set this as master document: "Options" &rarr; "**Define Current Document as 'Master Document'**".
 - Open `*.tex` files under [content/](documentation/content/) with Texmaker to edit the content.
 - Hit `F1` to compile.
 
