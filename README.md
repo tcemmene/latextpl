@@ -18,8 +18,9 @@ Setup:
 
 Tips:
 - Images should be pasted in [img/](documentation/img/) directory. They should be renamed with a prefix number `01_*` or `02_*` to match the nth-section in the content. This way, the images are ordered and can be identified more quickly.
-- Title page is editable in [main.tex](documentation/main.tex) line 218ff.
-- Abbreviations are editable in [80_abbreviations.tex](documentation/content/80_abbreviations.tex) (must be ordered manually in the end - excel can help). Additional information can be found [here](http://ctan.math.illinois.edu/macros/latex/contrib/acronym/acronym.pdf).
+- Title page is editable in [doku-tpl.cls](documentation/doku-tpl.cls#L32-L90) and in [main.tex](documentation/main.tex#L218-L228).
+- Header/footer are editable in [main.tex](documentation/main.tex#L250-L256).
+- Abbreviations are editable in [80_abbreviations.tex](documentation/content/80_abbreviations.tex). They must be ordered manually in the end - excel can help. Additional information can be found [here](http://ctan.math.illinois.edu/macros/latex/contrib/acronym/acronym.pdf).
 - Bibliography is editable in [main.bbl](documentation/content/main.bbl). Each entry needs a unique `label` which can be used as `\cite{label}` in the content to identify the resource.
 - Section headers should always be written in uppercase (example: "Initial Situation" instead of "Initial situation").
 - Main sections (`\section()`) should be started with a short overview text that describes the content of the upcoming section.
@@ -32,8 +33,8 @@ Tips:
 	Public content
   }\fi
   ```
-  To switch between the compiled versions, either `\longtrue` or `\longfalse` can be uncommented in [main.tex](documentation/content/main.tex) line 27ff.
-- Attachment PDFs can be pasted in `attachments/` and be included in appendix with `\includepdf{attachment.pdf}`, see [90_appendix.tex](documentation/content/90_appendix.tex#L69-L72).
+  To switch between the compiled versions, either `\longtrue` or `\longfalse` can be uncommented in [main.tex](documentation/content/main.tex#L28-L29).
+- Attachment PDFs can be pasted in `attachments/` and be included in appendix with `\includepdf{attachment.pdf}`, see [90_appendix.tex](documentation/content/90_appendix.tex#L69-L73).
 
 ### Presentation
 Source files can be found [here](presentation/).
