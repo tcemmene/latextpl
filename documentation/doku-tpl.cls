@@ -38,7 +38,6 @@
 \newcommand{\frontpage}{
 	\begin{titlepage}
 		\begin{center}
-			%\vspace*{3cm}
 		
 			% Top of page
 			\textsc{\LARGE \bfseries Hochschule Luzern T\&A}\\[0.2cm]
@@ -46,12 +45,6 @@
 			\textsc{\large Master of Science in Engineering}\\[.1cm]
 			\textsc{\large Field of specialization: \@discipline}\\[.5cm]
 			\vspace{4cm}
-			%\begin{figure}[h!]
-			%    \begin{center}
-			%    	\leavevmode
-			%    	\includegraphics[scale=0.35, trim = 0mm 0mm 0mm 0mm, clip]{logo.jpg}
-			%    \end{center}
-			%\end{figure}
 			\vspace{0.2cm}
 			\textsc{\Large \@subject}
 
@@ -61,34 +54,20 @@
 				\large \@subtitle
 			}\\[0.4cm]
 			\HRule \\[1.0cm]
-			
-			% Author
-			%\begin{minipage}{0.7\textwidth}
-				%\begin{center}
-				%	\normalsize
-				%	Verfasst von:\\
-				%	\large
-				%	\@author\\[.7cm]
-				%	\normalsize
-				%	Betreut von:\\
-				%	\large
-				%	\@adviser
-				%\end{center}
-			%\end{minipage}
-			
+						
 			\begin{tabular}{rl}
 				\textbf{Author} 				& Silvio Emmenegger \\
-				 			                    & Hochschule Luzern T\&A 
+												& Hochschule Luzern T\&A 
 				\vspace{0.2cm} 
-				\\ \textbf{Advisor} 			& Prof. Dr. Jürgen Wassner \\
-				 	                            & Hochschule Luzern T\&A
+				\\ \textbf{Advisor}				& Prof. Dr. Jürgen Wassner \\
+												& Hochschule Luzern T\&A
 				\vspace{0.2cm} 
 				\\ \textbf{Industrial partner}	%& t.b.d. \\
-				              					& Prof. Dr. Thomas Graf \\
-				              				    & Hochschule Luzern T\&A
+												& Prof. Dr. Thomas Graf \\
+												& Hochschule Luzern T\&A
    				\vspace{0.2cm} 	
-				\\ \textbf{Expert} 			    & Dr. David Perels \\
-				              				    & Sonova AG
+				\\ \textbf{Expert} 				& Dr. David Perels \\
+												& Sonova AG
 			\end{tabular}
 
 			% Bottom of page
