@@ -48,7 +48,7 @@ Setup:
 - Hit `F1` to compile.
 
 Tips:
-- Start with catchy intro to catch the attention of the audience (maybe short demonstration or audio/video about possible impact of positive outcome of the presenting subject).
+- Start with appealing intro to catch the attention of the audience (maybe short demonstration or audio/video about possible impact of positive outcome of the presenting subject).
 - Note 2-3 bullet points next to each figure.
 - Always mention source of images in slides. Use shortener for long URLs: [bitly](https://bitly.com).
 - Maximum of 16-17 slides with main content for 20min presentation time. Do not undershoot 1min per slide.
