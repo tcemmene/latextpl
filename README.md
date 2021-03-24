@@ -1,12 +1,11 @@
 # LaTeX Templates
 This repository contains templates to create technical documentations and presentations using LaTeX.
 
-- [LaTeX Templates](#latex-templates)
-  * [Requirements](#requirements)
-  * [Template Infos](#template-infos)
-    + [Documentation](#documentation)
-    + [Presentation](#presentation)
-  * [More Infos](#more-infos)
+* [Requirements](#requirements)
+* [Template Infos](#template-infos)
+  + [Documentation](#documentation)
+  + [Presentation](#presentation)
+* [More Infos](#more-infos)
 
 ## Requirements 
 Following software should be installed in advance (Win/MacOS/Linux):
