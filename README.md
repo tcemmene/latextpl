@@ -17,7 +17,7 @@ Setup:
 - Open `*.tex` files under [content/](documentation/content/) to edit the content of documentation.
 
 Tips:
-- Images should be pasted in [img/](img/) directory. They should be renamed with a prefix number `01_*` or `02_*` to match the nth-section in the content. This way, the images are ordered and can be identified faster.
+- Images should be pasted in [img/](documentation/img/) directory. They should be renamed with a prefix number `01_*` or `02_*` to match the nth-section in the content. This way, the images are ordered and can be identified faster.
 - Title page is editable in [main.tex](documentation/content/main.tex) line 218ff.
 - Abbreviations are editable in [80_abbreviations.tex](documentation/content/80_abbreviations.tex) (must be ordered manually in the end - excel can help). Additional information can be found [here](http://ctan.math.illinois.edu/macros/latex/contrib/acronym/acronym.pdf).
 - Bibliography is editable in [main.bbl](documentation/content/main.bbl). Each entry needs a unique `label` which can be used as `\cite{label}` in the content to identify the resource.
