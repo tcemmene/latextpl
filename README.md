@@ -55,5 +55,5 @@ Tips:
 - Less is more.
 
 ## More 
-- Basics tutorial: [flutterbys.com.au](https://www.flutterbys.com.au/stats/tut/tut17.1.html)
-- Special characters: [oeis.org](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
+- Basics tutorial: [flutterbys](https://www.flutterbys.com.au/stats/tut/tut17.1.html)
+- Special characters: [oeis](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
