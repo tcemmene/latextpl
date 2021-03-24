@@ -44,7 +44,7 @@ Source files can be found [here](presentation/).
 
 Setup:
 - Set build mode in Texmaker: "Options" &rarr; "Configure Texmaker" &rarr; "Quick Build" &rarr; "PdfLaTeX + **Bib(la)tex + PdfLaTeX (x2) + View Pdf**."
-- Open [main.tex](presentation/main.tex). Set this as master document: "Options" &rarr; "**Define Current Document as 'Master Document'**".
+- Open [main.tex](presentation/main.tex) with Texmaker. Set this as master document: "Options" &rarr; "**Define Current Document as 'Master Document'**".
 - Hit `F1` to compile.
 
 Tips:
