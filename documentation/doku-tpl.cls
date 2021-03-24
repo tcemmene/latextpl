@@ -56,18 +56,26 @@
 			\HRule \\[1.0cm]
 						
 			\begin{tabular}{rl}
-				\textbf{Author} 				& Silvio Emmenegger \\
-												& Hochschule Luzern T\&A 
+			
+				\textbf{Author} 				
+				& Silvio Emmenegger \\
+				& Hochschule Luzern T\&A 
+				
 				\vspace{0.2cm} 
-				\\ \textbf{Advisor}				& Prof. Dr. Jürgen Wassner \\
-												& Hochschule Luzern T\&A
+				\\ \textbf{Advisor}
+				& Prof. Dr. Jürgen Wassner \\				
+				& Hochschule Luzern T\&A
+				
 				\vspace{0.2cm} 
-				\\ \textbf{Industrial partner}	%& t.b.d. \\
-												& Prof. Dr. Thomas Graf \\
-												& Hochschule Luzern T\&A
+				\\ \textbf{Industrial partner}
+				& Prof. Dr. Thomas Graf \\
+				& Hochschule Luzern T\&A
+				
    				\vspace{0.2cm} 	
-				\\ \textbf{Expert} 				& Dr. David Perels \\
-												& Sonova AG
+				\\ \textbf{Expert}
+				& Dr. David Perels \\
+				& Sonova AG
+				
 			\end{tabular}
 
 			% Bottom of page
