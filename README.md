@@ -24,7 +24,8 @@ Tips:
 - Section headers should always be written in uppercase.
 - Main sections (`\section()`) should be started with a short overview text that describes the content of the upcoming section.
 - Confidential or public sections can be defined by:
-  ```\iflong{
+  ```
+  \iflong{
 	Confidential content
   }
   \else{
