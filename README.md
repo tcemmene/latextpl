@@ -3,8 +3,8 @@ This repository contains templates to create technical documentations and presen
 
 ## Requirements 
 Following software should be installed in advance (Win/MacOS/Linux):
-- MiKTeX [download](https://miktex.org/download)
-- Texmaker [download](https://www.xm1math.net/texmaker/download.html)
+- MiKTeX [download](https://miktex.org/download) (compiler)
+- Texmaker [download](https://www.xm1math.net/texmaker/download.html) (editor)
 
 ## Templates
 
