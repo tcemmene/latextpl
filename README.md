@@ -1,12 +1,6 @@
 # LaTeX Templates
 This repository contains templates to create technical documentations and presentations using LaTeX.
 
-* [Requirements](#requirements)
-* [Template Infos](#template-infos)
-  + [Documentation](#documentation)
-  + [Presentation](#presentation)
-* [More Infos](#more-infos)
-
 ## Requirements 
 Following software should be installed in advance (Win/MacOS/Linux):
 - MiKTeX [download](https://miktex.org/download) (compiler)
