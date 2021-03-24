@@ -27,7 +27,8 @@ Tips:
   }
   \else{
 	Public content
-  }\fi```
+  }\fi
+  ```
   To switch between the compiled versions, either `\longtrue` or `\longfalse` can be uncommented in [main.tex](content/main.tex) line 27ff.
 - Attachment PDFs can be pasted in `attachments/` and be included in appendix with `\includepdf{}`, see [90_appendix.tex](content/90_appendix.tex) line 69ff.
 
