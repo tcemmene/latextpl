@@ -1,4 +1,4 @@
-# LaTeX templates
+# LaTeX Templates
 This repository contains templates to create technical documentations and presentations using LaTeX.
 
 ## Requirements 
