@@ -2,7 +2,7 @@
 This repository contains templates to create technical documentations and presentations using LaTeX.
 
 ## Requirements 
-Following software should be installed in advance (installation order):
+Following software should be installed in advance (Win/MacOS/Linux):
 - MiKTeX [download](https://miktex.org/download)
 - Texmaker [download](https://www.xm1math.net/texmaker/download.html)
 
