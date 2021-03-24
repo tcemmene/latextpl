@@ -33,7 +33,7 @@ Tips:
   }\fi
   ```
   To switch between the compiled versions, either `\longtrue` or `\longfalse` can be uncommented in [main.tex](documentation/content/main.tex) line 27ff.
-- Attachment PDFs can be pasted in `attachments/` and be included in appendix with `\includepdf{attachment.pdf}`, see [90_appendix.tex](content/90_appendix.tex#L69-L72).
+- Attachment PDFs can be pasted in `attachments/` and be included in appendix with `\includepdf{attachment.pdf}`, see [90_appendix.tex](documentation/content/90_appendix.tex#L69-L72).
 
 ### Presentation
 Source files can be found [here](presentation/).
