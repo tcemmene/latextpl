@@ -58,7 +58,7 @@
 			\begin{tabular}{rl}
 			
 				\textbf{Author} 				
-				& Silvio Emmenegger \\
+				& \@author \\
 				& Hochschule Luzern T\&A 
 				
 				\vspace{0.2cm} 
